@@ -16,6 +16,10 @@ int main(){
 
     printf("Já se passaram %d segundos desde o inicio do dia.\n", result);
 
+    result = 86400 - result;
+
+    printf("Faltam %d segundos para o fim do dia.\n", result);
+
 
 
     return 0;
