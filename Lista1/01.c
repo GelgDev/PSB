@@ -9,17 +9,25 @@ int main(){
 
     //%zu é utilizado para tratar de valores em bits ou bytes
 
-    printf("Short short int: %zu\n ", sizeof(short int));
-    printf("Short int: %zu\n ", sizeof(int));
-    printf("Short long int: %zu\n ", sizeof(long int));
-    printf("Short long long int: %zu\n ", sizeof(long long int));
+    printf("short int: %zu\n", sizeof(short int));
+    printf("int: %zu\n", sizeof(int));
+    printf("long int: %zu\n", sizeof(long int));
+    printf("long long int: %zu\n", sizeof(long long int));
 
     printf("----------------------------------------------\n");
     
-    printf("Short short int in bits: %zu\n ", sizeof(short int)*8);
-    printf("Short int in bits: %zu\n ", sizeof(int)*8);
-    printf("Short long int in bits: %zu\n ", sizeof(long int)*8);
-    printf("Short long long int in bits: %zu\n ", sizeof(long long int)*8);
+    printf("short int in bits: %zu\n", sizeof(short int)*8);
+    printf("int in bits: %zu\n", sizeof(int)*8);
+    printf("long int in bits: %zu\n", sizeof(long int)*8);
+    printf("long long int in bits: %zu\n", sizeof(long long int)*8);
+
+    printf("----------------------------------------------\n");
+    printf("Usando *__CHAR_BIT__ no lugar de *8\n");
+    
+    printf("short int in bits: %zu\n", sizeof(short int)*__CHAR_BIT__);
+    printf("int in bits: %zu\n", sizeof(int)*__CHAR_BIT__);
+    printf("long int in bits: %zu\n", sizeof(long int)*__CHAR_BIT__);
+    printf("long long int in bits: %zu\n", sizeof(long long int)*__CHAR_BIT__);
 
     return 0;
 }
